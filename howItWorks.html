@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How This App Works</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2028;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            max-height: fit-content;
+            
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 40px;
+        }
+        .image-container {
+            flex: 0 0 auto;
+            margin: 1px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height:280px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        li::before {
+            content: "•";
+            color: #ffffff;
+            font-size: 24px;
+            margin-right: 10px;
+            line-height: 1;
+        }
+        .button {
+            background-color: transparent;
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            padding: 12px 45px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #00ffff;
+            color: #1e2028;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How this app works:</h1>
+        <div class="content">
+            <div class="text-content">
+                <ul>
+                    <li>The internet is a powerful tool, so you have to know how to use it wisely;</li>
+                    <li>Using interactive quizzes, we will help you get better at browsing the web safely and more productively;</li>
+                    <li>You will have to answer all the questions correctly to gain access to your favorite websites;</li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img src="howitworks-1.png" alt="Person using a smartphone">
+            </div>
+            
+            <div class="image-container">
+                <img src="howitworks-2.png" alt="Person using a laptop">
+            </div>
+            <a href="our design datafest.html" class="button" style="margin-bottom: 90px;margin-right: 130px;">Got it!</a>
+        </div>
+    
+    </div>
+</body>
+</html>

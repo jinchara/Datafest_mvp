@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Age</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2028;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .age-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+        .age-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+        .age-option img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .age-option p {
+            margin: 0;
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+        .btn {
+            background-color: transparent;
+            border: 2px solid #00a8a8;
+            color: #00a8a8;
+            padding: 10px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0 10px;
+        }
+        .btn:hover {
+            background-color: #00a8a8;
+            color: #1e2028;
+        }
+        .selected img {
+            border: 3px solid #00a8a8;
+        }
+        .selected p {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How old are you?</h1>
+        <div class="age-options">
+            <div class="age-option" onclick="selectAge(this, 'under18')">
+                <img src="gender-3.png" alt="Under 18">
+                <p>Under 18</p>
+            </div>
+            <div class="age-option" onclick="selectAge(this, 'between18and60')">
+                <img src="gender-2.png" alt="Between 18 and 60">
+                <p>Between<br>18 and 60</p>
+            </div>
+            <div class="age-option" onclick="selectAge(this, 'above60')">
+                <img src="gender-1.png" alt="Above 60">
+                <p>Above 60</p>
+            </div>
+        </div>
+        <button class="btn" onclick="location.href='gender.html'">Back</button>
+        <button class="btn" onclick="location.href = 'howItWorks.html'">Confirm</button>
+    </div>
+
+    <script>
+        function selectAge(element, age) {
+            document.querySelectorAll('.age-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            element.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
