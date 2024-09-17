@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops! That's not correct</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2028;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        .explanation {
+            background-color: #2a2d36;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .explanation p {
+            margin: 0 0 15px 0;
+        }
+        .incorrect-answer {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        .next-btn {
+            background-color: #00a8a8;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .next-btn:hover {
+            background-color: #008080;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oops! That's not correct</h1>
+        <div class="explanation">
+            <p>You selected <span class="incorrect-answer">Incorrect Answer</span></p>
+            <p>Here's why:</p>
+            <p>Detailed explanation of why the selected answer is incorrect and why the correct answer is right. This should provide educational value and help the user understand the concept better.</p>
+        </div>
+        <button class="next-btn" onclick="goToNextQuestion()">Next Question</button>
+    </div>
+
+</body>
+</html>

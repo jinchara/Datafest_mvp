@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results - Try Again</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2028;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        .result {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .message {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .image-container {
+            margin-bottom: 30px;
+        }
+        .image-container img {
+            max-width: 150px;
+            height: 150px;
+        }
+        .play-again-btn {
+            background-color: #d34437;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+        .play-again-btn:hover {
+            background-color: #5e0303;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oops! You didn't pass the test</h1>
+        <div class="result"><span id="score">XX</span>%</div>
+        <p class="message">Unfortunately, you didn't reach the 50% threshold required to access the websites. Let's try again to improve your media literacy skills!</p>
+        <div class="image-container">
+            <img src="image.png" alt="Encouragement image">
+        </div>
+        <button class="play-again-btn" onclick="playAgain()">Start Again</button>
+    </div>
+
+</body>
+</html>
