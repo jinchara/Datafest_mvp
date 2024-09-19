@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7/7 - Password Strength Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2028;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #00ffff, #ff00ff);
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #3a3d46;
+            border-radius: 4px;
+            background-color: #2a2d36;
+            color: #ffffff;
+        }
+        .next-btn {
+            background-color: #00ffff;
+            border: none;
+            color: #1e2028;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0;
+            transition: background-color 0.3s;
+        }
+        .next-btn:hover {
+            background-color: #00cccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Question 7/7 - Password Strength Test</h1>
+        <div class="input-group">
+            <label for="password">Enter a password:</label>
+            <input type="text" id="password" name="password">
+        </div>
+        <button class="next-btn" onclick="checkPassword()">Next</button>
+    </div>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            let strength = 0;
+
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/\d/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            if (strength >= 4) {
+                window.location.href = 'password_strong.html';
+            } else {
+                window.location.href = 'password_weak.html';
+            }
+        }
+    </script>
+</body>
+</html>

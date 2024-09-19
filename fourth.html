@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3/7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2028;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #00ffff, #ff00ff);
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .image-options {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .image-option {
+            cursor: pointer;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+            max-width: 45%;
+        }
+        .image-option img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .image-option.selected {
+            border-color: #00ffff;
+        }
+        .answer-btn {
+            background-color: transparent;
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .answer-btn:hover {
+            background-color: #00ffff;
+            color: #1e2028;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Question 4/7</h1>
+        <p>Which image is photoshopped?</p>
+        <div class="image-options">
+            <div class="image-option">
+                <img src="compared_image1.jpg" alt="Image 1">
+            </div>
+            <div class="image-option">
+                <img src="compared_image2.jpg" alt="Image 2">
+            </div>
+        </div>
+        <a href="fifth.html">
+            <button class="answer-btn">Answer</button>
+        </a>
+    </div>
+    <script>
+        document.querySelectorAll('.image-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.image-option').forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+</html>
